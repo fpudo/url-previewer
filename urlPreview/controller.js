@@ -17,6 +17,7 @@ module.exports.getPreview = (req, res, next) => {
             "title": $('meta[property="og:title"]').attr('content'),
             "image": $('meta[property="og:image"]').attr('content'),
             "description": $('meta[property="og:description"]').attr('content').trimLeft(),
+            "siteIcon": $('link[rel="mask-icon"]').attr('href'),
         }
         return next();
     }).catch(err => console.log(err));
