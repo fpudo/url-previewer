@@ -11,8 +11,6 @@ router.use((req, res, next) => {
 // Import controllers
 const ctrlUrlPreview = require('./controller');
 
-// Idea Routes
-
 router.get('/', ctrlUrlPreview.getPreview, (req, res, next) => { res.json(req.contentReturn)});
 
 module.exports = router;
